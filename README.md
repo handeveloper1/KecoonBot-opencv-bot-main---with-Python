@@ -9,3 +9,4 @@ metin.jpg --> Tespit etmesi gereken nesnenin fotoğrafını koyun. Yazı olur e�
 
 char.jpg --> Charın nick'in olduğu kısımdır. Eğer Tespit döngüsü yazarsanız charın kordinatına en yakın mobu seçtirmek için kullanılabilir. 
 
+001.py'yi çalıştırın. Kütüphaneleri kurmayı unutmayın.
