@@ -1,6 +1,7 @@
 # opencv-bot-main
 Knight Online OpenCv2 Anti-AFK Object Detection
 
+![image](https://user-images.githubusercontent.com/36090819/205471288-ef6374ac-c0f1-4991-a9e2-3599f2a142eb.png)
 
 
 headers.txt ---> Oyunun Pencere ismini yazınız
