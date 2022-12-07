@@ -16,28 +16,7 @@ import random
 import win32gui, win32ui, win32con
 
 
-def euqli_dist(p, q, squared=False):
-    # Calculates the euclidean distance, the "ordinary" distance between two
-    # points
-    # 
-    # The standard Euclidean distance can be squared in order to place
-    # progressively greater weight on objects that are farther apart. This
-    # frequently used in optimization problems in which distances only have
-    # to be compared.
-    if squared:
-        return ((p[0] - q[0]) ** 2) + ((p[1] - q[1]) ** 2)
-    else:
-        return sqrt(((p[0] - q[0]) ** 2) + ((p[1] - q[1]) ** 2))
 
-def closest(cur_pos, positions):
-    low_dist = float('inf')
-    closest_pos = None
-    for pos in positions:
-        dist = euqli_dist(cur_pos,pos)
-        if dist < low_dist:
-            low_dist = dist
-            closest_pos = pos
-    return closest_pos
 
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -49,12 +28,6 @@ def ListWindowNames():
             print(win32gui.GetWindowText(hwnd))
     win32gui.EnumWindows(winEnumHandler, None)
 
-
-def click(x,y):
-    win32api.SetCursorPos((x,y))
-    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
-    time.sleep(0.02) #This pauses the script for 0.02 seconds
-    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
 
 
 def findClickPositions(needle_img_path, haystack_img, threshold, debug_mode=None):
